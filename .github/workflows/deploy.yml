@@ -10,6 +10,7 @@ concurrency:
 
 jobs:
   deployment:
+    name: Deploy as Github Page
     runs-on: ubuntu-latest
 
     steps:
