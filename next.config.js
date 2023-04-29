@@ -1,7 +1,7 @@
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
-  basePath: isProd ? '/test' : '',
+  basePath: isProd ? "/mystaken" : "",
   reactStrictMode: true,
   images: {
     unoptimized: true,
