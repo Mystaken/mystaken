@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "@mystaken/themes";
+import { AppMDXProvider } from "@mystaken/src/app";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +14,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="favicon.ico" />
       </Head>
       <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
+        <AppMDXProvider>
+          <Component {...pageProps} />
+        </AppMDXProvider>
       </ChakraProvider>
     </>
   );
