@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, VStack } from "@chakra-ui/react";
 import { theme } from "@mystaken/themes";
-import { AppMDXProvider } from "@mystaken/src/app";
+import { AppMDXProvider, NavigationBar } from "@mystaken/src/app";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,7 +15,10 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ChakraProvider theme={theme}>
         <AppMDXProvider>
-          <Component {...pageProps} />
+          <VStack minH={"100vh"} height={"100vh"} spacing={0}>
+            <NavigationBar />
+            <Component {...pageProps} />
+          </VStack>
         </AppMDXProvider>
       </ChakraProvider>
     </>

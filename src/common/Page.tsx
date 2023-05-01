@@ -1,10 +1,21 @@
-import { VStack } from "@chakra-ui/react";
+import { VStack, chakra } from "@chakra-ui/react";
 import { FC, PropsWithChildren } from "react";
 
-export const Page: FC<PropsWithChildren> = (props) => {
+type Props = {
+  className?: string;
+};
+const PageBase: FC<PropsWithChildren<Props>> = (props) => {
   return (
-    <VStack minH={"100vh"} px={"100px"} height={"100vh"}>
+    <VStack
+      px={"100px"}
+      height={"full"}
+      w={"100%"}
+      className={props.className}
+      bg={"mystaken.primary.1"}
+    >
       {props.children}
     </VStack>
   );
 };
+
+export const Page = chakra(PageBase);

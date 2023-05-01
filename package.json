@@ -6,11 +6,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "yarn build:search-manifest && next build",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
-    "buld:search-manifest": "ts-node -T  ./scripts/createSearchManifest.mts",
+    "build:search-manifest": "ts-node -T  ./scripts/createSearchManifest.mts",
     "export": "next export"
   },
   "repository": {
