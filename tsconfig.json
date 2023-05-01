@@ -1,4 +1,8 @@
 {
+  "ts-node": {
+    "transpileOnly": true,
+    "esm": true
+  },
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["es6", "es7", "esnext"],
@@ -20,6 +24,6 @@
       "@mystaken/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "pages", "src", "themes"],
+  "include": ["next-env.d.ts", "pages", "src", "themes", "scripts"],
   "exclude": ["node_modules"]
 }

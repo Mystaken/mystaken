@@ -1,5 +1,5 @@
 import { Heading, VStack } from "@chakra-ui/react";
-import Post from "@mystaken/src/mdx/pages/test/markdown.mdx";
+// import { getAllFilesFrontMatter } from "./mdx";
 
 export default function Home({ postData }: any) {
   return (
@@ -17,7 +17,12 @@ export default function Home({ postData }: any) {
       >
         {"Kevin's Personal site: In-Progress!!"}
       </Heading>
-      <Post components={{ h3: (p) => <Heading {...p}></Heading> }} />
     </VStack>
   );
 }
+
+// export async function getStaticProps() {
+//   const posts = await getAllFilesFrontMatter();
+
+//   return { props: { posts } };
+// }

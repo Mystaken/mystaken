@@ -14,6 +14,7 @@
 
 # production
 /build
+/public/search.manifest.json
 
 # misc
 .DS_Store
